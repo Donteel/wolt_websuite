@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Правила использования — WoltBot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container text-center">
+  <h1 class="neon">📜 Правила использования</h1>
+  <p class="mb-4">Выберите ваше устройство, чтобы посмотреть инструкции</p>
+
+
+  <div class="alert-important mt-4 mb-5">
+    <span class="emoji">📡</span>
+    <strong>Важно:</strong> все заказы должны оформляться только через <u>мобильный интернет</u> (4G/5G).<br>
+    Использование Wi-Fi может привести к потере скидки или блокировке аккаунта.
+  </div>
+
+  <div class="device-select d-flex justify-content-center gap-3 flex-wrap mb-4">
+    <button id="btn-android" class="btn btn-neon" onclick="showRules('android')">🤖 Android</button>
+    <button id="btn-iphone" class="btn btn-outline-light" onclick="showRules('iphone')">🍎 iPhone</button>
+  </div>
+
+
+  <!-- Android rules -->
+  <div id="rules-android" class="glass rules-section">
+  <h3 class="neon">🧹 2. Как очистить данные приложения Wolt</h3>
+
+  <p class="text-start mt-3">
+    <span class="text-warning">⚠️ Это полностью удалит:</span><br>
+    – все данные приложения,<br>
+    – авторизацию,<br>
+    – настройки,<br>
+    – кэш.<br>
+    Приложение станет как <em>«свежеустановленное»</em>.
+  </p>
+
+  <hr class="my-4" style="border-color: #444;">
+
+  <p class="text-start">
+    🔄 <strong>Для большинства Android-устройств:</strong>
+  </p>
+
+  <ol class="text-start">
+    <li>Переведите телефон в <strong>Режим полета.</strong></li>
+    <li>Откройте <strong>Настройки</strong> телефона.</li>
+    <li>Перейдите в раздел <strong>Приложения</strong> (или <em>Приложения и уведомления</em>).</li>
+    <li>Найдите в списке или через поиск приложение <strong>Wolt</strong> и нажмите на него.</li>
+    <li>Выберите пункт <strong>Хранилище и кэш</strong> (или просто <em>«Хранилище»</em>).</li>
+    <li>
+      Нажмите <strong>Очистить хранилище</strong> (или <strong>Очистить данные</strong>),<br>
+      затем подтвердите, если появится окно с предупреждением.
+    </li>
+    <li>Отключите <strong>Режим полета.</strong></li>
+  </ol>
+</div>
+
+
+  <!-- iPhone rules -->
+  <div id="rules-iphone" class="glass rules-section">
+  <h3 class="neon">🧹 2. Как выгрузить приложение Wolt на iPhone</h3>
+
+  <p class="text-start mt-3">
+    <span class="text-warning">⚠️ Это удалит:</span><br>
+    – все пользовательские данные,<br>
+    – авторизацию,<br>
+    – настройки приложения,<br>
+    – кэш.<br>
+    <br>
+    Приложение будет полностью удалено с устройства. После переустановки оно будет «чистым».
+  </p>
+
+  <hr class="my-4" style="border-color: #444;">
+
+  <p class="text-start">
+    🍏 <strong>Как выгрузить (удалить) Wolt на iPhone:</strong>
+  </p>
+
+  <ol class="text-start">
+    <li>Откройте <strong>Настройки</strong> на устройстве.</li>
+    <li>Перейдите в раздел <strong>Основные → Хранилище iPhone</strong>.</li>
+    <li>Найдите в списке приложение <strong>Wolt</strong> и нажмите на него.</li>
+    <li>Нажмите <strong>Удалить приложение</strong>.</li>
+    <li>Подтвердите удаление при появлении предупреждения.</li>
+    <li>После этого можно заново установить Wolt из App Store.</li>
+  </ol>
+
+  <p class="text-muted mt-4">
+    Обратите внимание: удаление приложения необходимо перед каждой новой авторизацией через WoltBot.
+  </p>
+</div>
+
+
+  <div class="mt-5">
+    <a href="index.html" class="btn btn-outline-light">← Назад на главную</a>
+  </div>
+
+  <footer class="text-center mt-5">
+    <p>© 2025 WoltBot | только для личного использования</p>
+  </footer>
+</div>
+
+<script>
+  function showRules(device) {
+    // Скрыть все секции
+    document.querySelectorAll('.rules-section').forEach(el => el.classList.remove('active'));
+    // Показать выбранную
+    const target = document.getElementById(`rules-${device}`);
+    if (target) target.classList.add('active');
+
+    // Кнопки
+    const btnAndroid = document.getElementById('btn-android');
+    const btnIphone = document.getElementById('btn-iphone');
+
+    if (device === 'android') {
+      btnAndroid.classList.add('btn-neon');
+      btnAndroid.classList.remove('btn-outline-light');
+
+      btnIphone.classList.add('btn-outline-light');
+      btnIphone.classList.remove('btn-neon');
+    } else {
+      btnIphone.classList.add('btn-neon');
+      btnIphone.classList.remove('btn-outline-light');
+
+      btnAndroid.classList.add('btn-outline-light');
+      btnAndroid.classList.remove('btn-neon');
+    }
+  }
+
+  // При загрузке страницы показать Android по умолчанию
+  document.addEventListener('DOMContentLoaded', () => {
+    showRules('android');
+  });
+</script>
+
+
+</body>
+</html>
+
