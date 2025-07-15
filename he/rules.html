@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>כללי שימוש — WoltBot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="../style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container text-center">
+    <div class="language-switcher d-flex justify-content-end gap-2 mt-3 mb-4">
+      <a href="/" class="btn btn-outline-info btn-sm">🇷🇺 Русский</a>
+      <a href="/en/" class="btn btn-outline-info btn-sm">🇺🇸 English</a>
+      <a href="/he/" class="btn btn-outline-info btn-sm">🇮🇱 עברית</a>
+    </div>
+  <h1 class="neon">📜 כללי שימוש</h1>
+  <p class="mb-4">בחר את המכשיר שלך כדי לצפות בהוראות</p>
+
+  <div class="alert-important mt-4 mb-5">
+    <span class="emoji">📡</span>
+    <strong>חשוב:</strong> יש לבצע את כל ההזמנות רק דרך <u>אינטרנט סלולרי</u> (4G/5G).<br>
+    שימוש ב-Wi-Fi עלול לגרום לאובדן ההנחה או לחסימת החשבון.
+  </div>
+
+  <div class="device-select d-flex justify-content-center gap-3 flex-wrap mb-4">
+    <button id="btn-android" class="btn btn-neon" onclick="showRules('android')">🤖 אנדרואיד</button>
+    <button id="btn-iphone" class="btn btn-outline-light" onclick="showRules('iphone')">🍎 אייפון</button>
+  </div>
+
+  <!-- Android rules -->
+  <div id="rules-android" class="glass rules-section">
+    <h3 class="neon">🧹 איך לנקות את נתוני אפליקציית Wolt</h3>
+
+    <p class="text-start mt-3">
+      <span class="text-warning">⚠️ זה ימחק לחלוטין:</span><br>
+      – את כל נתוני האפליקציה,<br>
+      – את ההתחברות,<br>
+      – את ההגדרות,<br>
+      – את הקובצי המטמון.<br>
+      האפליקציה תחזור למצב <em>"כאילו הותקנה מחדש"</em>.
+    </p>
+
+    <hr class="my-4" style="border-color: #444;">
+
+    <p class="text-start">
+      🔄 <strong>לרוב מכשירי האנדרואיד:</strong>
+    </p>
+
+    <ol class="text-start">
+      <li>הפעל <strong>מצב טיסה</strong> בטלפון.</li>
+      <li>כנס אל <strong>הגדרות</strong>.</li>
+      <li>גש לקטגוריה <strong>אפליקציות</strong> (או <em>אפליקציות והתראות</em>).</li>
+      <li>מצא את <strong>Wolt</strong> ברשימה או חפש אותה ולחץ עליה.</li>
+      <li>בחר ב-<strong>אחסון וזיכרון מטמון</strong> (או רק <em>אחסון</em>).</li>
+      <li>
+        לחץ על <strong>נקה אחסון</strong> (או <strong>נקה נתונים</strong>),<br>
+        ואשר את המחיקה אם מופיעה הודעת אזהרה.
+      </li>
+      <li>כבה את <strong>מצב הטיסה</strong>.</li>
+    </ol>
+  </div>
+
+  <!-- iPhone rules -->
+  <div id="rules-iphone" class="glass rules-section">
+    <h3 class="neon">🧹 איך להסיר את אפליקציית Wolt באייפון</h3>
+
+    <p class="text-start mt-3">
+      <span class="text-warning">⚠️ זה ימחק:</span><br>
+      – את כל נתוני המשתמש,<br>
+      – את ההתחברות,<br>
+      – את הגדרות האפליקציה,<br>
+      – את הקבצים הזמניים.<br><br>
+      האפליקציה תוסר לחלוטין מהמכשיר. לאחר התקנה מחדש — היא תהיה נקייה.
+    </p>
+
+    <hr class="my-4" style="border-color: #444;">
+
+    <p class="text-start">
+      🍏 <strong>איך להסיר את Wolt באייפון:</strong>
+    </p>
+
+    <ol class="text-start">
+      <li>כנס ל<strong>הגדרות</strong> באייפון.</li>
+      <li>גש אל <strong>כללי → אחסון iPhone</strong>.</li>
+      <li>מצא את <strong>Wolt</strong> ברשימה ולחץ עליה.</li>
+      <li>לחץ על <strong>מחק אפליקציה</strong>.</li>
+      <li>אשר את המחיקה אם מופיעה הודעה.</li>
+      <li>לאחר מכן תוכל להתקין שוב את Wolt מה-App Store.</li>
+    </ol>
+
+    <p class="warning mt-4">
+      שים לב: מחיקת האפליקציה נדרשת לפני כל התחברות חדשה דרך WoltBot.
+    </p>
+  </div>
+
+  <div class="mt-5">
+    <a href="index.html" class="btn btn-outline-light">← חזרה לעמוד הראשי</a>
+  </div>
+
+  <footer class="text-center mt-5">
+    <p>© 2025 Dark Wolt | לשימוש אישי בלבד</p>
+  </footer>
+</div>
+
+<script>
+  function showRules(device) {
+    document.querySelectorAll('.rules-section').forEach(el => el.classList.remove('active'));
+    const target = document.getElementById(`rules-${device}`);
+    if (target) target.classList.add('active');
+
+    const btnAndroid = document.getElementById('btn-android');
+    const btnIphone = document.getElementById('btn-iphone');
+
+    if (device === 'android') {
+      btnAndroid.classList.add('btn-neon');
+      btnAndroid.classList.remove('btn-outline-light');
+      btnIphone.classList.add('btn-outline-light');
+      btnIphone.classList.remove('btn-neon');
+    } else {
+      btnIphone.classList.add('btn-neon');
+      btnIphone.classList.remove('btn-outline-light');
+      btnAndroid.classList.add('btn-outline-light');
+      btnAndroid.classList.remove('btn-neon');
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    showRules('android');
+  });
+</script>
+
+</body>
+</html>
