@@ -1,130 +1,151 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he">
 <head>
   <meta charset="UTF-8">
-  <title>כללי שימוש — WoltBot</title>
+  <title>כללי שימוש – WoltBot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap -->
+  <!-- Bootstrap RTL -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-  <link href="../style.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="container text-center">
-    <div class="language-switcher d-flex justify-content-end gap-2 mt-3 mb-4">
-      <a href="/wolt_websuite/" class="btn btn-outline-info btn-sm">🇷🇺 Русский</a>
-      <a href="/wolt_websuite/en/" class="btn btn-outline-info btn-sm">🇺🇸 English</a>
-      <a href="/wolt_websuite/he/" class="btn btn-outline-info btn-sm">🇮🇱 עברית</a>
-    </div>
-  <h1 class="neon">📜 כללי שימוש</h1>
-  <div class="glass mt-5" dir="rtl" lang="he">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+      <div class="container">
+        <a class="navbar-brand neon" href="/he/index.html">Dark Wolt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="תפריט">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="/he/index.html">דף הבית</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="/he/rules.html">הוראות</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">עזרה</a>
+              </li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a href="/index.html" class="btn btn-outline-info btn-sm">🇷🇺 RU</a>
+            <a href="/en/index.html" class="btn btn-outline-info btn-sm">🇬🇧 EN</a>
+            <a href="/he/index.html" class="btn btn-outline-info btn-sm">🇮🇱 HE</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <h1 class="neon text-center">📜 כללי שימוש</h1>
+
+  <div class="glass mt-5 container text-center">
     <h3 class="neon">🤖 איך להשתמש בבוט</h3>
-    <p class="text-start">
-      לפני שמתחילים:
-      <ul class="text-start">
-        <li>📴 הפעל מצב <strong>טיסה</strong> למשך 2–3 דקות</li>
-        <li>🧹 נקה את נתוני אפליקציית Wolt (ראה למטה)</li>
+
+    <div class="text-end" dir="rtl">
+      <p>לפני שמתחילים:</p>
+      <ul class="text-end" style="list-style: none; padding-right: 0;">
+        <li><span dir="rtl">📴 העבר את המכשיר למצב טיסה למשך 2–3 דקות</span></li>
+        <li><span dir="rtl">🧹 נקה את נתוני אפליקציית Wolt (ראו למטה)</span></li>
       </ul>
-    </p>
-    <p class="text-start mt-3">
-      לאחר מכן:
-      <ol class="text-start">
-        <li>פתח את הבוט בטלגרם</li>
-        <li>לחץ על <strong>🍖 קבל חשבון Wolt</strong></li>
-        <li>פתח את אפליקציית Wolt והתחבר באמצעות המייל שניתן לך</li>
-        <li>המתן שהבוט ישלח את הכפתור <strong>🩵 השלם התחברות</strong> ולחץ עליו</li>
-      </ol>
-    </p>
-    <div class="alert-important mt-5">
+    </div>
+
+
+
+  <p class="text-end mt-3">אחר כך:</p>
+  <ol dir="rtl" class="text-end" style="list-style-position: inside;">
+    <li>פתח את הבוט בטלגרם</li>
+    <li>לחץ על <strong>🍖 קבל חשבון Wolt</strong></li>
+    <li>פתח את אפליקציית Wolt והיכנס עם <strong>כתובת המייל שקיבלת</strong></li>
+    <li>המתן לכפתור <strong>🩵 סיום התחברות</strong> מהבוט ולחץ עליו</li>
+  </ol>
+
+
+    <div class="alert-important mt-5 text-end">
       <span class="emoji">📡</span>
-      <strong>חשוב:</strong> יש לבצע את כל ההזמנות רק דרך <u>אינטרנט סלולרי</u> (4G/5G).<br>
+      <strong>חשוב:</strong> יש לבצע את ההזמנות רק דרך <u>אינטרנט סלולרי</u> (4G/5G).<br>
       שימוש ב-Wi-Fi עלול לגרום לאובדן ההנחה או לחסימת החשבון.
     </div>
   </div>
 
-
-  <p class="mt-5">בחר את המכשיר שלך כדי לצפות בהוראות</p>
-
+  <p class="mt-5 text-center">בחר את סוג המכשיר שלך כדי להציג הוראות</p>
   <div class="device-select d-flex justify-content-center gap-3 flex-wrap mb-4">
     <button id="btn-android" class="btn btn-neon" onclick="showRules('android')">🤖 אנדרואיד</button>
     <button id="btn-iphone" class="btn btn-outline-light" onclick="showRules('iphone')">🍎 אייפון</button>
   </div>
 
   <!-- Android rules -->
-  <div id="rules-android" class="glass rules-section">
-    <h3 class="neon">🧹 איך לנקות את נתוני אפליקציית Wolt</h3>
+  <div id="rules-android" class="glass rules-section mt-5 container text-center">
+    <h3 class="neon">🧹 ניקוי נתונים באפליקציית Wolt</h3>
 
-    <p class="text-start mt-3">
+    <p class="text-end mt-3">
       <span class="text-warning">⚠️ זה ימחק לחלוטין:</span><br>
       – את כל נתוני האפליקציה,<br>
-      – את ההתחברות,<br>
+      – את ההתחברות לחשבון,<br>
       – את ההגדרות,<br>
-      – את הקובצי המטמון.<br>
-      האפליקציה תחזור למצב <em>"כאילו הותקנה מחדש"</em>.
+      – ואת הקאש (מטמון).<br>
+      האפליקציה תחזור למצב של התקנה חדשה.
     </p>
 
     <hr class="my-4" style="border-color: #444;">
 
-    <p class="text-start">
+    <p class="text-end">
       🔄 <strong>לרוב מכשירי האנדרואיד:</strong>
     </p>
 
-    <ol class="text-start">
-      <li>הפעל <strong>מצב טיסה</strong> בטלפון.</li>
-      <li>כנס אל <strong>הגדרות</strong>.</li>
-      <li>גש לקטגוריה <strong>אפליקציות</strong> (או <em>אפליקציות והתראות</em>).</li>
-      <li>מצא את <strong>Wolt</strong> ברשימה או חפש אותה ולחץ עליה.</li>
-      <li>בחר ב-<strong>אחסון וזיכרון מטמון</strong> (או רק <em>אחסון</em>).</li>
-      <li>
-        לחץ על <strong>נקה אחסון</strong> (או <strong>נקה נתונים</strong>),<br>
-        ואשר את המחיקה אם מופיעה הודעת אזהרה.
-      </li>
-      <li>כבה את <strong>מצב הטיסה</strong>.</li>
+    <ol dir="rtl" class="text-end" style="list-style-position: inside;">
+      <li>העבר את הטלפון למצב טיסה</li>
+      <li>גש ל<strong>הגדרות</strong> במכשיר</li>
+      <li>בחר <strong>אפליקציות</strong> או <em>אפליקציות והתראות</em></li>
+      <li>מצא את Wolt ולחץ עליו</li>
+      <li>בחר <strong>אחסון וקאש</strong> או <em>אחסון</em></li>
+      <li>לחץ על <strong>נקה אחסון</strong> או <strong>נקה נתונים</strong> ואשר</li>
+      <li>כבה את מצב הטיסה</li>
     </ol>
+
   </div>
 
   <!-- iPhone rules -->
-  <div id="rules-iphone" class="glass rules-section">
-    <h3 class="neon">🧹 איך להסיר את אפליקציית Wolt באייפון</h3>
+  <div id="rules-iphone" class="glass rules-section mt-5 container text-center">
+    <h3 class="neon">🧹 מחיקת אפליקציית Wolt באייפון</h3>
 
-    <p class="text-start mt-3">
-      <span class="text-warning">⚠️ זה ימחק:</span><br>
+    <p class="text-end mt-3">
+      <span class="text-warning">⚠️ פעולה זו תמחק:</span><br>
       – את כל נתוני המשתמש,<br>
-      – את ההתחברות,<br>
-      – את הגדרות האפליקציה,<br>
-      – את הקבצים הזמניים.<br><br>
-      האפליקציה תוסר לחלוטין מהמכשיר. לאחר התקנה מחדש — היא תהיה נקייה.
+      – התחברות לחשבון,<br>
+      – הגדרות האפליקציה,<br>
+      – ואת הקאש.<br><br>
+      לאחר התקנה מחדש, האפליקציה תהיה "נקייה".
     </p>
 
     <hr class="my-4" style="border-color: #444;">
 
-    <p class="text-start">
-      🍏 <strong>איך להסיר את Wolt באייפון:</strong>
+    <p class="text-end">
+      🍏 <strong>איך למחוק את Wolt באייפון:</strong>
     </p>
 
-    <ol class="text-start">
-      <li>כנס ל<strong>הגדרות</strong> באייפון.</li>
-      <li>גש אל <strong>כללי → אחסון iPhone</strong>.</li>
-      <li>מצא את <strong>Wolt</strong> ברשימה ולחץ עליה.</li>
-      <li>לחץ על <strong>מחק אפליקציה</strong>.</li>
-      <li>אשר את המחיקה אם מופיעה הודעה.</li>
-      <li>לאחר מכן תוכל להתקין שוב את Wolt מה-App Store.</li>
+    <ol dir="rtl" class="text-end" style="list-style-position: inside;">
+      <li>גש ל<strong>הגדרות</strong> באייפון</li>
+      <li>בחר <strong>כללי → אחסון iPhone</strong></li>
+      <li>מצא את Wolt ולחץ עליו</li>
+      <li>לחץ על <strong>מחק אפליקציה</strong></li>
+      <li>אשר את המחיקה</li>
+      <li>לאחר מכן תוכל להתקין מחדש את האפליקציה מה-App Store</li>
     </ol>
 
-    <p class="warning mt-4">
-      שים לב: מחיקת האפליקציה נדרשת לפני כל התחברות חדשה דרך WoltBot.
-    </p>
-  </div>
 
-  <div class="mt-5">
-    <a href="index.html" class="btn btn-outline-light">← חזרה לעמוד הראשי</a>
+    <p class="warning mt-4">
+      שים לב: יש למחוק את האפליקציה לפני כל כניסה חדשה דרך WoltBot.
+    </p>
   </div>
 
   <footer class="text-center mt-5">
     <p>© 2025 Dark Wolt | לשימוש אישי בלבד</p>
   </footer>
-</div>
 
 <script>
   function showRules(device) {
@@ -138,13 +159,13 @@
     if (device === 'android') {
       btnAndroid.classList.add('btn-neon');
       btnAndroid.classList.remove('btn-outline-light');
-      btnIphone.classList.add('btn-outline-light');
       btnIphone.classList.remove('btn-neon');
+      btnIphone.classList.add('btn-outline-light');
     } else {
       btnIphone.classList.add('btn-neon');
       btnIphone.classList.remove('btn-outline-light');
-      btnAndroid.classList.add('btn-outline-light');
       btnAndroid.classList.remove('btn-neon');
+      btnAndroid.classList.add('btn-outline-light');
     }
   }
 
@@ -155,3 +176,4 @@
 
 </body>
 </html>
+

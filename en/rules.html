@@ -2,129 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Usage Rules — WoltBot</title>
+  <title>Usage Guide — WoltBot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
   <link href="../style.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="container text-center">
-    <div class="language-switcher d-flex justify-content-end gap-2 mt-3 mb-4">
-      <a href="/wolt_websuite/" class="btn btn-outline-info btn-sm">🇷🇺 Русский</a>
-      <a href="/wolt_websuite/en/" class="btn btn-outline-info btn-sm">🇺🇸 English</a>
-      <a href="/wolt_websuite/he/" class="btn btn-outline-info btn-sm">🇮🇱 עברית</a>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <div class="container">
+      <a class="navbar-brand neon" href="/wolt_websuite/en/">Dark Wolt</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/en/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/en/rules.html">Instructions</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+        </ul>
+        <div class="d-flex gap-2">
+          <a href="/index.html" class="btn btn-outline-info btn-sm">🇷🇺 RU</a>
+          <a href="/en/index.html" class="btn btn-outline-info btn-sm">🇬🇧 EN</a>
+          <a href="/he/index.html" class="btn btn-outline-info btn-sm">🇮🇱 HE</a>
+        </div>
+      </div>
     </div>
-  <h1 class="neon">📜 Usage Rules</h1>
-  <div class="glass mt-5">
-    <h3 class="neon">🤖 How to use the bot</h3>
-    <p class="text-start">
-      Before you start:
-      <ul class="text-start">
-        <li>📴 Turn on <strong>Airplane mode</strong> for 2–3 minutes</li>
-        <li>🧹 Clear the Wolt app data (see below)</li>
-      </ul>
-    </p>
-    <p class="text-start mt-3">
-      Then:
-      <ol class="text-start">
-        <li>Open the bot in Telegram</li>
-        <li>Press <strong>🍖 Get Wolt account</strong></li>
-        <li>Open the Wolt app and log in using the provided email</li>
-        <li>Wait for the bot to send the <strong>🩵 Complete login</strong> button and press it</li>
-      </ol>
-    </p>
-    <div class="alert-important mt-5">
-      <span class="emoji">📡</span>
-      <strong>Important:</strong> all orders must be placed using <u>mobile data</u> (4G/5G) only.<br>
-      Using Wi-Fi may result in losing the discount or account being blocked.
-    </div>
+  </nav>
+</header>
+
+<h1 class="neon text-center">📜 Usage Guide</h1>
+
+<div class="glass mt-5 container text-center">
+  <h3 class="neon">🤖 How to Use the Bot</h3>
+
+  <ul class="text-start">
+    <li>📴 Put your phone in <strong>Airplane Mode</strong> for 2–3 minutes</li>
+    <li>🧹 Clear Wolt App Data (see below)</li>
+  </ul>
+
+  <ol class="text-start mt-3">
+    <li>Open the bot in Telegram</li>
+    <li>Tap <strong>🍖 Get Wolt Account</strong></li>
+    <li>Open the Wolt app and log in using the <strong>provided email</strong></li>
+    <li>Wait for <strong>🩵 Complete Login</strong> button and tap it</li>
+  </ol>
+
+  <div class="alert-important mt-5">
+    <span class="emoji">📡</span>
+    <strong>Important:</strong> All orders must be made using <u>mobile internet</u> (4G/5G).<br>
+    Using Wi-Fi may cause loss of discount or account ban.
   </div>
-
-
-  <p class="mt-5">Select your device to view instructions</p>
-
-  <div class="device-select d-flex justify-content-center gap-3 flex-wrap mb-4">
-    <button id="btn-android" class="btn btn-neon" onclick="showRules('android')">🤖 Android</button>
-    <button id="btn-iphone" class="btn btn-outline-light" onclick="showRules('iphone')">🍎 iPhone</button>
-  </div>
-
-  <!-- Android rules -->
-  <div id="rules-android" class="glass rules-section">
-    <h3 class="neon">🧹 How to clear Wolt app data</h3>
-
-    <p class="text-start mt-3">
-      <span class="text-warning">⚠️ This will completely erase:</span><br>
-      – all app data,<br>
-      – authorization,<br>
-      – settings,<br>
-      – cache.<br>
-      The app will be like <em>“freshly installed.”</em>
-    </p>
-
-    <hr class="my-4" style="border-color: #444;">
-
-    <p class="text-start">
-      🔄 <strong>For most Android devices:</strong>
-    </p>
-
-    <ol class="text-start">
-      <li>Turn on <strong>Airplane mode</strong> on your phone.</li>
-      <li>Open the phone’s <strong>Settings</strong>.</li>
-      <li>Go to <strong>Apps</strong> (or <em>Apps & Notifications</em>).</li>
-      <li>Find <strong>Wolt</strong> in the list or search for it, then tap it.</li>
-      <li>Select <strong>Storage & cache</strong> (or just <em>“Storage”</em>).</li>
-      <li>
-        Tap <strong>Clear storage</strong> (or <strong>Clear data</strong>),<br>
-        then confirm if a warning appears.
-      </li>
-      <li>Turn off <strong>Airplane mode</strong>.</li>
-    </ol>
-  </div>
-
-  <!-- iPhone rules -->
-  <div id="rules-iphone" class="glass rules-section">
-    <h3 class="neon">🧹 How to offload the Wolt app on iPhone</h3>
-
-    <p class="text-start mt-3">
-      <span class="text-warning">⚠️ This will delete:</span><br>
-      – all user data,<br>
-      – authorization,<br>
-      – app settings,<br>
-      – cache.<br><br>
-      The app will be completely removed from the device. After reinstalling, it will be “clean.”
-    </p>
-
-    <hr class="my-4" style="border-color: #444;">
-
-    <p class="text-start">
-      🍏 <strong>How to offload (remove) Wolt on iPhone:</strong>
-    </p>
-
-    <ol class="text-start">
-      <li>Open the device’s <strong>Settings</strong>.</li>
-      <li>Go to <strong>General → iPhone Storage</strong>.</li>
-      <li>Find <strong>Wolt</strong> in the list and tap it.</li>
-      <li>Tap <strong>Delete App</strong>.</li>
-      <li>Confirm the deletion when prompted.</li>
-      <li>You can reinstall Wolt from the App Store afterward.</li>
-    </ol>
-
-    <p class="warning mt-4">
-      Note: deleting the app is required before each new login via WoltBot.
-    </p>
-  </div>
-
-  <div class="mt-5">
-    <a href="index.html" class="btn btn-outline-light">← Back to Home</a>
-  </div>
-
-  <footer class="text-center mt-5">
-    <p>© 2025 Dark Wolt | for personal use only</p>
-  </footer>
 </div>
+
+<p class="mt-5 text-center">Choose your device to view instructions</p>
+<div class="device-select d-flex justify-content-center gap-3 flex-wrap mb-4">
+  <button id="btn-android" class="btn btn-neon" onclick="showRules('android')">🤖 Android</button>
+  <button id="btn-iphone" class="btn btn-outline-light" onclick="showRules('iphone')">🍎 iPhone</button>
+</div>
+
+<!-- Android Instructions -->
+<div id="rules-android" class="glass rules-section mt-5 container text-center">
+  <h3 class="neon">🧹 How to Clear Wolt App Data</h3>
+
+  <p class="text-start mt-3">
+    <span class="text-warning">⚠️ This will completely erase:</span><br>
+    – all app data,<br>
+    – login sessions,<br>
+    – settings,<br>
+    – cache.<br>
+    The app will behave like freshly installed.
+  </p>
+
+  <hr class="my-4" style="border-color: #444;">
+
+  <ol class="text-start">
+    <li>Enable <strong>Airplane Mode</strong></li>
+    <li>Open <strong>Settings</strong> on your phone</li>
+    <li>Go to <strong>Apps</strong> or <em>Apps & Notifications</em></li>
+    <li>Find <strong>Wolt</strong> app and tap it</li>
+    <li>Select <strong>Storage & cache</strong></li>
+    <li>Tap <strong>Clear storage</strong> or <strong>Clear data</strong> and confirm</li>
+    <li>Disable <strong>Airplane Mode</strong></li>
+  </ol>
+</div>
+
+<!-- iPhone Instructions -->
+<div id="rules-iphone" class="glass rules-section mt-5 container text-center">
+  <h3 class="neon">🧹 How to Remove Wolt App on iPhone</h3>
+
+  <p class="text-start mt-3">
+    <span class="text-warning">⚠️ This will delete:</span><br>
+    – all user data,<br>
+    – login sessions,<br>
+    – app settings,<br>
+    – cache.<br><br>
+    The app will be clean after reinstalling.
+  </p>
+
+  <hr class="my-4" style="border-color: #444;">
+
+  <ol class="text-start">
+    <li>Open <strong>Settings</strong> on your iPhone</li>
+    <li>Go to <strong>General → iPhone Storage</strong></li>
+    <li>Find and tap <strong>Wolt</strong></li>
+    <li>Tap <strong>Delete App</strong></li>
+    <li>Confirm deletion</li>
+    <li>Reinstall from the App Store</li>
+  </ol>
+
+  <p class="warning mt-4">
+    Note: App must be removed before each new login via WoltBot.
+  </p>
+</div>
+
+<footer class="text-center mt-5">
+  <p>© 2025 Dark Wolt | For personal use only</p>
+</footer>
 
 <script>
   function showRules(device) {
@@ -132,25 +128,14 @@
     const target = document.getElementById(`rules-${device}`);
     if (target) target.classList.add('active');
 
-    const btnAndroid = document.getElementById('btn-android');
-    const btnIphone = document.getElementById('btn-iphone');
+    document.getElementById('btn-android').classList.toggle('btn-neon', device === 'android');
+    document.getElementById('btn-android').classList.toggle('btn-outline-light', device !== 'android');
 
-    if (device === 'android') {
-      btnAndroid.classList.add('btn-neon');
-      btnAndroid.classList.remove('btn-outline-light');
-      btnIphone.classList.add('btn-outline-light');
-      btnIphone.classList.remove('btn-neon');
-    } else {
-      btnIphone.classList.add('btn-neon');
-      btnIphone.classList.remove('btn-outline-light');
-      btnAndroid.classList.add('btn-outline-light');
-      btnAndroid.classList.remove('btn-neon');
-    }
+    document.getElementById('btn-iphone').classList.toggle('btn-neon', device === 'iphone');
+    document.getElementById('btn-iphone').classList.toggle('btn-outline-light', device !== 'iphone');
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    showRules('android');
-  });
+  document.addEventListener('DOMContentLoaded', () => showRules('android'));
 </script>
 
 </body>

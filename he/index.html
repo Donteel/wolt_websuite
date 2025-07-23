@@ -1,48 +1,76 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he">
 <head>
   <meta charset="UTF-8">
-  <title>WoltBot — הנחות בהסוואה</title>
+  <title>Dark Wolt דף הבית</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom CSS -->
   <link href="../style.css" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+      <div class="container">
+        <a class="navbar-brand neon" href="/he/index.html">Dark Wolt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="תפריט">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                  <a class="nav-link" href="/he/index.html">דף הבית</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="/he/rules.html">הוראות</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">עזרה</a>
+              </li>
+          </ul>
+          <div class="d-flex gap-2">
+            <a href="/index.html" class="btn btn-outline-info btn-sm">🇷🇺 RU</a>
+            <a href="/en/index.html" class="btn btn-outline-info btn-sm">🇬🇧 EN</a>
+            <a href="/he/index.html" class="btn btn-outline-info btn-sm">🇮🇱 HE</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-<div class="container text-center">
-  <div class="language-switcher d-flex justify-content-end gap-2 mt-3 mb-4">
-    <a href="/wolt_websuite/" class="btn btn-outline-info btn-sm">🇷🇺 Русский</a>
-    <a href="/wolt_websuite/en/" class="btn btn-outline-info btn-sm">🇺🇸 English</a>
-    <a href="/wolt_websuite/he/" class="btn btn-outline-info btn-sm">🇮🇱 עברית</a>
-  </div>
-
-
-  <h1 class="neon">Dark Wolt</h1>
-  <p class="mb-5">מערכת להשגת חשבונות Wolt טעונים</p>
+  <h1 class="text-center neon mb-5">Dark Wolt</h1>
 
   <div class="glass mx-auto" style="max-width: 700px;">
+    <p>הבוט הזה נועד כדי שתוכלו <strong>להזמין מ-Wolt בזול יותר</strong>.</p>
+
+    <h3 class="neon mt-4">איך זה עובד:</h3>
     <p>
-      Dark Wolt הוא כלי פרטי בטלגרם שמאפשר לקבל חשבון Wolt פעיל
-      עם הרשאות של לקוח חדש תוך מספר לחיצות בלבד. המערכת נועדה לשימוש אישי בלבד ואינה מפרה את תנאי השימוש של אפליקציית Wolt.
-    </p>
-    <p class="mt-3">
-      פשטות, מהירות, אנונימיות. בלי פרסומות, בלי הרשמה, בלי עקבות.
-    </p>
-    <p class="warning mt-4">
-      🚫 איננו אחראים לכל שימוש בבוט שמפר את תנאי השירות של Wolt.
+      הבוט נותן לכם חשבון חדש עם הטבות של לקוח חדש.
+      תקבלו <strong>15 ש"ח הנחה</strong> על כל אחד משני ההזמנות הראשונות ו<strong>משלוחים חינם ל-14 ימים</strong>.
+      ניתן גם להפעיל Wolt+ לחודש — פחות רלוונטי, אבל אפשרי.
     </p>
 
-    <div class="mt-4 d-flex justify-content-center gap-3 flex-wrap">
-      <a href="rules.html" class="btn btn-outline-light btn-lg">📜 כללי שימוש</a>
-    </div>
+    <h3 class="neon mt-4">מה חשוב לדעת:</h3>
+    <p>
+      כתבו תמיד את מספר הטלפון שלכם בהערה לכתובת או להזמנה.
+      <br />
+      <strong>אסור לשנות את המספר בתוך החשבון או לפנות לתמיכה של Wolt בנושא.</strong>
+    </p>
+
+    <p>
+      לאחר 2 הזמנות, יש לבקש חשבון חדש אם נגמרו הבונוסים.
+      שימוש ארוך בחשבון עלול להוביל לחסימתו.
+    </p>
+
+    <h3 class="neon mt-4">חינם לחלוטין:</h3>
+    <p>
+      זה חינם לגמרי! שתפו את הבוט עם חברים והשאירו ביקורת ב-Insta
+      <a class="text-decoration-none text-primary" href="https://www.instagram.com/darkwolt_il?igsh=Zm15ODI1aHBucnF4">באינסטגרם</a>.
+    </p>
   </div>
 
   <footer class="text-center mt-5">
     <p>© 2025 Dark Wolt | לשימוש אישי בלבד | בהשראת דארקנט</p>
   </footer>
-</div>
-
 </body>
 </html>
